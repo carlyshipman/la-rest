@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<link rel="stylesheet" href="la-resturant.css">
+<!--
+	Author: Carly Shipman
+	Project: Matchmaker for the web
+
+	All rights reserved.
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<title> La Resturant De Carly </title>
+</head>
+<br></br>
+<body>
+	<div class="navbar">
+		<a href="index.html">home</a>
+		<a href="order.html">order</a>
+		<a href="#reveiws">reveiws</a>
+		<h1>La Resturant de Carly  </h1>
+	  </div>
+	  <br>
+	  <h2>fine breakfast cuisine</h2>
+
+	<div class="row">
+		<div class="column" >
+			<br><br>
+				<h3>
+					Beverages:
+				</h3>
+				<br><br>
+				<button class="button2" onclick="addBillDrinkIBC()">$7- iced black coffee</button>
+				<button class="button2" onclick="addBillDrinkHBC()">$6- hot black coffee</button>
+				<button class="button2" onclick="addBillDrinkCL()">$6- cinammon latte</button>
+				<br><br>	
+				<button class="button2" onclick="addBillDrinkML()">$6- iced matcha latte</button>
+				<button class="button2" onclick="addBillDrinkEBT()">$6- english breakfast tea</button>
+				<button class="button2" onclick="addBillDrinkCM()">$4- chocolate milk</button>
+			</div>
+			<br><br>
+				<h3>
+					Breakfast items:
+				</h3>
+				<br><br>
+				<button class="button1" onclick="addBillFoodFP()">$20- foot pancake</button>
+				<button class="button1" onclick="addBillFoodBW()">$10- 2 buttermilk waffles</button>
+				<button class="button1" onclick="addBillFoodCR()">$17- cinammon rolls</button>
+				<br><br>
+				<button class="button1" onclick="addBillFoodBG()">$17- biscut's and gravy</button>
+				<button class="button1" onclick="addBillFoodCBH()">$20- corn beef hash</button>					
+				<button class="button1" onclick="addBillFoodFT()">$16- french toast</button>
+			</div>
+		</div>
+
+	<br>
+	<div class="row">
+		<div class="column" >
+	<p id="billIBC"></p>
+	<p id="billHBC"></p>
+	<p id="billCL"></p>
+	<p id="billML"></p>
+	<p id="billEBT"></p>
+	<p id="billCM"></p>
+	<p id="billFP"></p>
+	<p id="billBW"></p>
+	<p id="billCR"></p>
+	<p id="billBG"></p>
+	<p id="billCBH"></p>
+	<p id="billFT"></p>
+	</div>
+	<br><br>
+	<button class="button3" onclick="order()">press to submit order</button>
+	<p id="orderB"></p>
+
+		<script>
+		console.log("starting script");
+
+		let totalBill= 0
+
+		//drink bill total
+
+		let totalCostDrink=0
+		let totalCostFood=0 
+
+
+		//iced black coffee
+		numberIBC=0
+		allBillIBC=0
+
+		function addBillDrinkIBC(){
+			console.log("iced black coffee");
+			numberIBC= numberIBC + 1
+			allBillIBC= allBillIBC + 7
+			totalCostDrink= totalCostDrink + 7
+			console.log("drink= " + totalCostDrink)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billIBC").innerHTML = numberIBC +  "\xa0" + "iced black coffee" +  "\xa0" + "$" + allBillIBC;
+		}
+
+		//hot black coffee
+		numberHBC= 0
+		allBillHBC=0
+
+		function addBillDrinkHBC(){
+			console.log("hot black coffee");
+			numberHBC= numberHBC + 1
+			allBillHBC= allBillHBC + 6
+			totalCostDrink= totalCostDrink + 6
+			console.log("drink= " + totalCostDrink)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billHBC").innerHTML = numberHBC +  "\xa0" + "hot black coffee" +  "\xa0" + "$" + allBillHBC;
+		}
+
+		//cinammon latte
+		numberCL=0
+		allBillCL=0
+
+		function addBillDrinkCL(){
+			console.log("cinammon latte");
+			numberCL= numberCL+ 1
+			allBillCL= allBillCL+ 6
+			totalCostDrink= totalCostDrink + 6
+			console.log("drink= " + totalCostDrink)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billCL").innerHTML = numberCL +  "\xa0" + "cinammon latte"  +  "\xa0" + "$" + allBillCL;
+		}
+
+		//matcha latte
+		numberML= 0
+		allBillML= 0
+
+		function addBillDrinkML(){
+			console.log("matcha latte");
+			numberML= numberML + 1
+			allBillML= allBillML + 6
+			totalCostDrink= totalCostDrink + 6
+			console.log("drink= " + totalCostDrink)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billML").innerHTML = numberML +  "\xa0" + "" +  "\xa0" + "matcha"  +  "\xa0" + "$" + allBillML;
+		}
+
+		//english breakfast tea
+		numberEBT= 0
+		allBillEBT= 0
+
+		function addBillDrinkEBT(){
+			console.log("english breakfast tea");
+			numberEBT= numberEBT +1
+			allBillEBT= allBillEBT +6
+			totalCostDrink= totalCostDrink + 6
+			console.log("drink= " + totalCostDrink)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billEBT").innerHTML = numberEBT +  "\xa0" + "" +  "\xa0" + "english breakfast tea" +  "\xa0" + "$" +  allBillEBT;
+		}
+
+		//chocolate milk
+		numberCM= 0
+		allBillCM= 0
+
+
+		function addBillDrinkCM(){
+			console.log("chocolate milk");
+			numberCM= numberCM + 1
+			allBillCM= allBillCM + 4
+			totalCostDrink= totalCostDrink + 4
+			console.log("drink= " + totalCostDrink)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billCM").innerHTML = numberCM +  "\xa0" + "" +  "\xa0" + "chocolate milk"  +  "\xa0" + "$" + allBillCM;
+		}
+
+		numberDrink= numberCM + numberEBT + numberML + numberCL + numberHBC + numberIBC
+
+	//total food bill
+
+		totalCostFood= 0
+
+		//foot pancake
+		numberFP= 0
+		allBillFP= 0
+
+
+		function addBillFoodFP(){
+			console.log("foot pancake");
+			numberFP= numberFP + 1
+			allBillFP= allBillFP +20
+			totalCostFood= totalCostFood + 20
+			console.log("food= " + totalCostFood)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billFP").innerHTML =  numberFP +  "\xa0" + "" +  "\xa0" + "foot pancake" +  "\xa0" + "$" + allBillFP;
+		}
+
+		//buttermilk waffles
+		numberBW= 0
+		allBillBW= 0
+
+		function addBillFoodBW(){
+			console.log("2 buttermilk waffles");
+			numberBW= numberBW + 1
+			allBillBW= allBillBW + 10
+			totalCostFood= totalCostFood + 10
+			console.log("food= " + totalCostFood)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billBW").innerHTML =  numberBW +  "\xa0" + "" +  "\xa0" + "buttermilk waffles" +  "\xa0" + "$" + allBillBW;
+		}
+
+		//cinammon rolls
+		numberCR= 0
+		allBillCR= 0
+
+		function addBillFoodCR(){
+			console.log("cinammon rolls");
+			numberCR= numberCR + 1
+			allBillCR= allBillCR +17
+			totalCostFood= totalCostFood + 17
+			console.log("food= " + totalCostFood)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billCR").innerHTML = numberCR +  "\xa0" + "" +  "\xa0" + "cinammon rolls" +  "\xa0" + "$" + allBillCR;
+		}
+
+		//biscuts and gravy
+		numberBG= 0
+		allBillBG= 0
+
+		function addBillFoodBG(){
+			console.log("biscuit's and gravy");
+			numberBG= numberBG + 1
+			allBillBG= allBillBG + 17
+			totalCostFood= totalCostFood + 17
+			console.log("food= " + totalCostFood)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billBG").innerHTML = numberBG +  "\xa0" + "" +  "\xa0" + "biscuits and gravy" +  "\xa0" + "$" + allBillBG;
+		}
+		//corn beef hash
+		numberCBH= 0
+		allBillCBH= 0
+
+		function addBillFoodCBH(){
+			console.log("corn beef hash");
+			numberCBH= numberCBH +1
+			allBillCBH= allBillCBH + 20
+			totalCostFood= totalCostFood + 20
+			console.log("food= " + totalCostFood)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billCBH").innerHTML = numberCBH +  "\xa0" + "" +  "\xa0" + "corn beef hash" +  "\xa0" + "$" + allBillCBH;
+		}
+		//french toast
+		numberFT= 0
+		allBillFT= 0
+
+		function addBillFoodFT(){
+			console.log("french toast");
+			numberFT= numberFT + 1
+			allBillFT= allBillFT +16
+			totalCostFood= totalCostFood + 16
+			console.log("food= " + totalCostFood)
+			totalBill = totalCostFood + totalCostDrink
+			console.log(totalBill)
+			document.getElementById("billFT").innerHTML = numberFT +  "\xa0" + "" +  "\xa0" + "french toast" +  "\xa0" + "$" + allBillFT;
+		}
+		
+		numberMeal= numberFP + numberBW + numberCR + numberBG + numberCBH + numberFT
+
+		totalBill = totalCostFood + totalCostDrink;
+
+		function order(){
+				document.getElementById("orderB").innerHTML = "your total is: $" + totalBill;
+
+		}
+
+
+
+	</script>
+</html>
